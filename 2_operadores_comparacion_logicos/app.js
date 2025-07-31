@@ -50,3 +50,6 @@ if (numB === 0) {
     let division = numA / numB;
     console.log(`La división de ${numA} / ${numB} = ${division}`);
 }
+
+
+console.log(`Tu número es ${numa}`)
