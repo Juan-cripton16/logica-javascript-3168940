@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rodolfo Aicardi - Homenaje</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Rodolfo Aicardi</h1>
+    <nav>
+      <span class="menu-toggle">☰</span>
+      <ul>
+        <li><a href="#bio">Biografía</a></li>
+        <li><a href="#disco">Discografía</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="dark-btn" onclick="toggleDarkMode()">🌙</button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1 class="fade-in">La voz inmortal de la música tropical</h1>
+    <button class="hero-btn" onclick="playPause()">▶ Escuchar</button>
+    <audio id="audio" src="https://www.mfiles.co.uk/mp3-downloads/gs-cd-track2.mp3"></audio>
+  </section>
+
+  <!-- BIO -->
+  <section id="bio" class="section fade-section">
+    <h2>Biografía</h2>
+    <p>
+      Rodolfo Aicardi (1946 - 2007) fue un cantante colombiano, 
+      considerado una de las voces más importantes de la música tropical. 
+      Conocido como "El ídolo de siempre", dejó un legado imborrable 
+      con éxitos que aún suenan en fiestas y celebraciones.
+    </p>
+  </section>
+
+  <!-- DISCO -->
+  <section id="disco" class="section fade-section">
+    <h2>Discografía</h2>
+    <input type="text" id="filtro" placeholder="Filtrar álbum..." onkeyup="filtrarAlbumes()">
+    <div id="listaAlbumes">
+      <div class="album">Cantares de Navidad</div>
+      <div class="album">Boogaloo en Colombia</div>
+      <div class="album">Rodolfo y su Típica RA7</div>
+      <div class="album">Navidad con Rodolfo</div>
+    </div>
+  </section>
+
+
+    <!-- GALERIA -->
+    <section id="galeria" class="section fade-section">
+    <h2>Galería</h2>
+    <div class="galeria">
+    <img id="imgPrincipal" src="rodolfo1.png" alt="Rodolfo Aicardi 1">
+    </div>
+    <button id="cambiarImg">Cambiar Imagen</button>
+  </section>
+
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section fade-section">
+    <h2>Contacto</h2>
+    <form onsubmit="return validarFormulario()">
+      <input type="text" id="nombre" placeholder="Tu nombre">
+      <span id="errorNombre" class="error"></span>
+      <input type="email" id="email" placeholder="Tu correo">
+      <span id="errorEmail" class="error"></span>
+      <textarea id="mensaje" placeholder="Escribe tu mensaje"></textarea>
+      <span id="errorMensaje" class="error"></span>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- BOTÓN TOP -->
+  <button id="topBtn" onclick="scrollToTop()">⬆</button>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+</body>
+</html>

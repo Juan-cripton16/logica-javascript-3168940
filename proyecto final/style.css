@@ -1,0 +1,84 @@
+/* GENERAL */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+html { scroll-behavior: smooth; }
+body { background: #f5f5f5; color: #222; transition: 0.3s; }
+
+/* HEADER */
+header {
+  display: flex; justify-content: space-between;
+  align-items: center; padding: 1rem;
+  background: #800000; color: #fff;
+  position: sticky; top: 0; z-index: 100;
+}
+nav ul { list-style: none; display: flex; gap: 1rem; }
+nav ul li a { text-decoration: none; color: #fff; font-weight: bold; transition: color .3s; }
+nav ul li a:hover { color: #ffcc00; }
+.menu-toggle { display: none; cursor: pointer; }
+.dark-btn { background: transparent; border: none; color: #fff; font-size: 1.2rem; cursor: pointer; }
+
+/* HERO */
+.hero {
+  text-align: center; padding: 6rem 1rem;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Rodolfo_Aicardi.png') no-repeat center/cover;
+  color: #fff;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  background: rgba(0,0,0,0.6);
+  display: inline-block; padding: .5rem 1rem;
+  border-radius: 10px;
+}
+.hero-btn {
+  margin-top: 1.5rem; padding: .8rem 1.2rem;
+  border: none; border-radius: 8px;
+  background: #ffcc00; color: #000; cursor: pointer;
+  font-weight: bold; transition: transform .2s;
+}
+.hero-btn:hover { transform: scale(1.1); }
+
+/* SECCIONES */
+section { padding: 3rem 1rem; max-width: 1000px; margin: auto; }
+h2 { margin-bottom: 1rem; color: #800000; }
+
+/* DISCOGRAFIA */
+.album {
+  border: 1px solid #ddd; padding: 1rem; margin: .5rem 0;
+  border-radius: 10px; background: #fff;
+  transition: transform .2s, box-shadow .2s;
+}
+.album:hover { transform: scale(1.02); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+
+/* GALERÍA */
+.galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; }
+.galeria img { width: 100%; border-radius: 10px; transition: transform .3s; }
+.galeria img:hover { transform: scale(1.05); }
+
+/* CONTACTO */
+form { display: flex; flex-direction: column; gap: 1rem; }
+input, textarea { padding: .8rem; border: 1px solid #ccc; border-radius: 8px; }
+button { padding: .8rem; border: none; border-radius: 8px; background: #800000; color: #fff; cursor: pointer; }
+.error { color: red; font-size: .8rem; }
+
+/* MODO OSCURO */
+.dark { background: #111; color: #eee; }
+.dark header { background: #333; }
+.dark h2 { color: #ffcc00; }
+
+/* ANIMACIONES */
+.fade-section { opacity: 0; transform: translateY(50px); transition: all .8s ease; }
+.fade-section.show { opacity: 1; transform: translateY(0); }
+
+/* BOTÓN ARRIBA */
+#topBtn {
+  position: fixed; bottom: 20px; right: 20px;
+  padding: .7rem; border: none; border-radius: 50%;
+  background: #800000; color: #fff;
+  cursor: pointer; display: none; font-size: 1.2rem;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+  nav ul { flex-direction: column; display: none; background: #800000; padding: 1rem; }
+  nav ul.show { display: flex; }
+  .menu-toggle { display: block; }
+}
